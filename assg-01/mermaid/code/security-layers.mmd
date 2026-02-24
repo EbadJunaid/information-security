@@ -1,0 +1,28 @@
+graph LR
+    subgraph Application["Application Layer Security"]
+        A1[End-to-End Encryption<br/>RSA-2048 + AES-256-GCM]
+        A2[Password Hashing<br/>bcrypt]
+        A3[Session Management<br/>Secure Tokens]
+    end
+    
+    subgraph Network["Transport Layer Security"]
+        N1[HTTPS/TLS<br/>Self-Signed Certificate]
+    end
+    
+    subgraph Access["Access Control"]
+        AC1[Authentication<br/>Session Validation]
+        AC2[Authorization<br/>Message Filtering]
+    end
+    
+    User([User]) --> A1
+    A1 --> N1
+    N1 --> AC1
+    AC1 --> AC2
+    AC2 --> Server[(Server Storage)]
+    
+    style A1 fill:#FFD700
+    style A2 fill:#FFA07A
+    style A3 fill:#90EE90
+    style N1 fill:#87CEEB
+    style AC1 fill:#FF6347
+    style AC2 fill:#FF6347

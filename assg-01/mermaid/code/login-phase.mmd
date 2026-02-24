@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant Alice as Alice (Client)
+    participant Server as Server (HTTPS)
+    participant Bob as Bob (Client)
+    
+    Note over Alice,Bob: LOGIN PHASE
+    
+    Alice->>Server: POST /login<br/>{username, password}
+    Server->>Server: Verify password with bcrypt
+    Server->>Server: Generate session token
+    Server-->>Alice: {session_token}
+    Alice->>Alice: Store session token
+    
+    Bob->>Server: POST /login<br/>{username, password}
+    Server->>Server: Verify password with bcrypt
+    Server->>Server: Generate session token
+    Server-->>Bob: {session_token}
+    Bob->>Bob: Store session token

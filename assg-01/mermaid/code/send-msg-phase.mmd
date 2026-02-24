@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant Alice as Alice (Client)
+    participant Server as Server (HTTPS)
+    participant Bob as Bob (Client)
+    
+    Note over Alice,Bob: SEND ENCRYPTED MESSAGE
+    
+    Alice->>Server: GET /public_key/bob
+    Server-->>Alice: {bob_public_key}
+    
+    Alice->>Alice: Generate random AES-256 key
+    Alice->>Alice: Encrypt message with AES-GCM<br/>(plaintext → ciphertext + nonce)
+    Alice->>Alice: Encrypt AES key with Bob's RSA public key<br/>(aes_key → encrypted_key)
+    
+    Alice->>Server: POST /send {session_token}<br/>{to: bob, encrypted_key, ciphertext, nonce}
+    Server->>Server: Validate session token
+    Server->>Server: Check authorization
+    Server->>Server: Store encrypted message<br/>(Server CANNOT decrypt!)
+    Server-->>Alice: 200 OK - Message stored

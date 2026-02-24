@@ -1,0 +1,29 @@
+sequenceDiagram
+    participant Alice as Alice (Client)
+    participant Server as Server (HTTPS)
+    participant Bob as Bob (Client)
+    
+    Note over Alice,Bob: REGISTRATION
+    Alice->>Alice: Generate RSA Keys
+    Alice->>Server: POST /register
+    Server->>Server: Hash password (bcrypt)
+    Server-->>Alice: 200 OK
+    
+    Note over Alice,Bob: LOGIN
+    Alice->>Server: POST /login
+    Server->>Server: Verify password
+    Server-->>Alice: {session_token}
+    
+    Note over Alice,Bob: SEND MESSAGE
+    Alice->>Server: GET /public_key/bob
+    Server-->>Alice: {bob_public_key}
+    Alice->>Alice: Encrypt with AES-GCM
+    Alice->>Alice: Encrypt AES key with RSA
+    Alice->>Server: POST /send (encrypted)
+    Server->>Server: Store encrypted
+    
+    Note over Alice,Bob: RECEIVE MESSAGE
+    Bob->>Server: GET /messages
+    Server-->>Bob: [encrypted messages]
+    Bob->>Bob: Decrypt with RSA + AES
+    Bob->>Bob: Display plaintext

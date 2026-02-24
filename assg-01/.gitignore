@@ -1,0 +1,8 @@
+.vscode
+certs
+markdowns
+recording
+keys
+manual/document.txt
+screenshots
+utils/__pycache__

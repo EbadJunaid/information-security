@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant Alice as Alice (Client)
+    participant Server as Server (HTTPS)
+    participant Bob as Bob (Client)
+    
+    Note over Alice,Bob: RECEIVE & DECRYPT MESSAGE
+    
+    Bob->>Server: GET /messages {session_token}
+    Server->>Server: Validate session token
+    Server->>Server: Filter: only Bob's messages<br/>(Authorization check)
+    Server-->>Bob: [{sender: alice, encrypted_key, ciphertext, nonce}]
+    
+    Bob->>Bob: Decrypt AES key with RSA private key<br/>(encrypted_key → aes_key)
+    Bob->>Bob: Decrypt message with AES-GCM<br/>(ciphertext + nonce → plaintext)
+    Bob->>Bob: Display plaintext message
