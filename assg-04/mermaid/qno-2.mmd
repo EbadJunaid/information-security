@@ -1,0 +1,12 @@
+graph TD
+    UI[Frontend UI]
+    API[Backend API]
+    Agent[AI Agent]
+    VS[(Vector Store)]
+    Docker[Docker Sandbox Containers]
+
+    UI -->|Sends user actions to| API
+    API -->|Assigns testing tasks to| Agent
+    API -->|Saves settings & logs to| VS
+    Agent -->|Stores and searches memory in| VS
+    Agent -->|Runs security tools inside| Docker
