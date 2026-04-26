@@ -25,4 +25,4 @@ This document contains the completed answers for the PentAGI penetration testing
 * **Legal Violations:** Identified key laws (US CFAA, UK CMA) and the principle of Cyber Trespass that strictly prohibit unauthorized network scanning, regardless of educational intentions.
 
 ## Status
-**Completed.** All 11 questions have been answered concisely and accurately based on the official PentAGI documentation and standard cybersecurity principles in the report 
+**Completed.** All 11 questions have been answered concisely and accurately based on the official PentAGI documentation and standard cybersecurity principles in the [Report](bscs22046-infosec-assg-04.pdf). 
