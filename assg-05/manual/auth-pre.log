@@ -1,0 +1,52 @@
+2025-04-10 08:15:22 sshd[1123]: Accepted password for john from 192.168.1.105 port 54321
+2025-04-10 08:17:01 sudo: john : TTY=pts/0 ; PWD=/home/john ; USER=root ; COMMAND=/usr/bin/apt update
+2025-04-10 08:20:44 sshd[1189]: Accepted publickey for alice from 10.0.0.45 port 49876
+2025-04-10 08:22:10 sshd[1190]: Failed password for invalid user admin from 203.0.113.5 port 33210
+2025-04-10 08:23:45 sshd[1195]: Accepted password for bob from 192.168.1.110 port 55123
+2025-04-10 08:25:30 sudo: bob : TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2025-04-10 08:30:12 sshd[1250]: Connection closed by authenticating user root 192.168.1.105 port 54322
+2025-04-10 08:35:01 CRON[1301]: pam_unix(cron:session): session opened for user root by (uid=0)
+2025-04-10 08:35:02 CRON[1301]: pam_unix(cron:session): session closed for user root
+2025-04-10 08:40:22 sshd[1322]: Failed password for oracle from 192.168.1.200 port 37891
+2025-04-10 08:42:55 sshd[1330]: Accepted password for alice from 10.0.0.45 port 50012
+2025-04-10 08:45:10 sudo: alice : TTY=pts/2 ; PWD=/var/www ; USER=www-data ; COMMAND=/usr/bin/zip -r backup.zip html/
+2025-04-10 08:50:33 sshd[1402]: Invalid user test from 198.51.100.77 port 44321
+2025-04-10 08:55:17 sshd[1410]: Accepted publickey for john from 192.168.1.105 port 56123
+2025-04-10 08:58:44 sudo: john : TTY=pts/0 ; PWD=/home/john ; USER=root ; COMMAND=/usr/bin/nmap -sV localhost
+2025-04-10 09:02:10 sshd[1455]: Failed password for root from 203.0.113.5 port 38901
+2025-04-10 09:05:22 sshd[1460]: Accepted password for bob from 192.168.1.110 port 57123
+2025-04-10 09:08:30 CRON[1477]: pam_unix(cron:session): session opened for user backup by (uid=1002)
+2025-04-10 09:08:31 CRON[1477]: pam_unix(cron:session): session closed for user backup
+2025-04-10 09:12:45 sshd[1501]: Connection closed by 192.168.1.105 port 56124
+2025-04-10 09:15:33 sshd[1520]: Accepted publickey for alice from 10.0.0.45 port 51234
+2025-04-10 09:18:19 sudo: alice : TTY=pts/2 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/less /var/log/auth.log
+2025-04-10 09:22:00 sshd[1555]: Failed password for support from 198.51.100.77 port 45678
+2025-04-10 09:25:44 sshd[1563]: Accepted password for john from 192.168.1.105 port 59123
+2025-04-10 09:28:10 sudo: john : TTY=pts/0 ; PWD=/home/john ; USER=root ; COMMAND=/usr/bin/apt install fail2ban -y
+2025-04-10 09:32:22 sshd[1601]: Invalid user ftpuser from 203.0.113.5 port 39821
+2025-04-10 09:35:50 CRON[1622]: pam_unix(cron:session): session opened for user root by (uid=0)
+2025-04-10 09:35:51 CRON[1622]: pam_unix(cron:session): session closed for user root
+2025-04-10 09:40:11 sshd[1644]: Failed password for alice from 10.0.0.45 port 52345
+2025-04-10 09:42:35 sshd[1650]: Accepted password for alice from 10.0.0.45 port 52346
+2025-04-10 09:45:01 sudo: alice : TTY=pts/2 ; PWD=/var/backups ; USER=root ; COMMAND=/usr/bin/tar -czf web_backup.tar.gz /var/www/html
+2025-04-10 09:48:29 sshd[1688]: Connection closed by 192.168.1.110 port 57124
+2025-04-10 09:50:17 sshd[1695]: Accepted publickey for bob from 192.168.1.110 port 60123
+2025-04-10 09:53:44 sudo: bob : TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/systemctl restart sshd
+2025-04-10 09:57:10 sshd[1733]: Failed password for root from 198.51.100.77 port 47890
+2025-04-10 10:00:22 sshd[1740]: Invalid user guest from 203.0.113.5 port 40123
+2025-04-10 10:03:55 CRON[1766]: pam_unix(cron:session): session opened for user alice by (uid=1001)
+2025-04-10 10:03:56 CRON[1766]: pam_unix(cron:session): session closed for user alice
+2025-04-10 10:07:30 sshd[1788]: Accepted password for john from 192.168.1.105 port 61234
+2025-04-10 10:10:15 sudo: john : TTY=pts/0 ; PWD=/home/john ; USER=root ; COMMAND=/usr/bin/ss -tulpn
+2025-04-10 10:14:22 sshd[1812]: Failed password for alice from 10.0.0.45 port 53456
+2025-04-10 10:17:45 sshd[1820]: Accepted password for alice from 10.0.0.45 port 53457
+2025-04-10 10:20:33 sudo: alice : TTY=pts/2 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/chmod 777 /tmp
+2025-04-10 10:24:00 sshd[1855]: Connection closed by 192.168.1.105 port 61235
+2025-04-10 10:27:19 sshd[1863]: Accepted publickey for bob from 192.168.1.110 port 62123
+2025-04-10 10:30:44 CRON[1880]: pam_unix(cron:session): session opened for user root by (uid=0)
+2025-04-10 10:30:45 CRON[1880]: pam_unix(cron:session): session closed for user root
+2025-04-10 10:34:10 sshd[1902]: Invalid user mysql from 203.0.113.5 port 41234
+2025-04-10 10:38:55 sshd[1915]: Failed password for oracle from 192.168.1.200 port 38901
+2025-04-10 10:42:30 sshd[1928]: Accepted password for john from 192.168.1.105 port 63123
+2025-04-10 10:45:22 sudo: john : TTY=pts/0 ; PWD=/home/john ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+2025-04-10 10:50:00 sshd[1955]: Connection closed by 192.168.1.110 port 62124
